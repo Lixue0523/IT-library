@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "492ebec5-52d7-4124-9af1-1e2d6d5fb03b",
+		"name": "deployer-APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "update-all-in-one",
+			"item": []
+		},
+		{
+			"name": "deployer-getStatus",
+			"item": [
+				{
+					"name": "get Auth Token :5443/suiteInstaller/urest/v1.1/tokens",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"passwordCredentials\": {\r\n    \"username\": \"admin\",\r\n    \"password\": \"1Qaz2wsx,\"\r\n  },\r\n  \"tenantName\": \"provider\"\r\n}"
+						},
+						"url": {
+							"raw": "https://shc-sma-cd75.hpeswlab.net:5443/suiteInstaller/urest/v1.1/tokens",
+							"protocol": "https",
+							"host": [
+								"shc-sma-cd75",
+								"hpeswlab",
+								"net"
+							],
+							"port": "5443",
+							"path": [
+								"suiteInstaller",
+								"urest",
+								"v1.1",
+								"tokens"
+							]
+						},
+						"description": "get IDM auth token"
+					},
+					"response": []
+				},
+				{
+					"name": "http://{{HOST}}:31009/itsma/install?Accept=application/json",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2ddd0a8f-6168-4cb8-aa3d-5d0be31fb4b6",
+								"exec": [
+									"pm.test(\"Get Service IDM status\",function(){",
+									"    pm.response.to.have.status(200);",
+									"    var res=pm.response.json();",
+									"    res.statuses",
+									"    ",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-AUTH-TOKEN",
+								"value": "{{lwssoToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{HOST}}:31009/itsma/install?=&Accept=application/json",
+							"protocol": "http",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "31009",
+							"path": [
+								"itsma",
+								"install"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": ""
+								},
+								{
+									"key": "Accept",
+									"value": "application/json"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
