@@ -18,3 +18,4 @@ Rule: when you add one new Page, please add page link in the README.md and edit 
 * [Task- Quality Keeper - sonar scan at PR side](https://github.com/Lixue0523/IT-library/wiki/%5BSonar-scan-at-PR-side%5D)
 * [Ansible 简介](https://github.com/Lixue0523/IT-library/wiki/%5BAnsible%5D-basic-usage)
 * [Push images from artifactory to multiple clouds](https://github.com/Lixue0523/IT-library/wiki/%5Bcloud-devops%5Dpush-images-to-multiple-clouds)
+* [git usage](https://github.com/Lixue0523/IT-library/wiki/Git-usage)
