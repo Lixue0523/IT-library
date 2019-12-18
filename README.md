@@ -19,3 +19,4 @@ Rule: when you add one new Page, please add page link in the README.md and edit 
 * [Ansible 简介](https://github.com/Lixue0523/IT-library/wiki/%5BAnsible%5D-basic-usage)
 * [Push images from artifactory to multiple clouds](https://github.com/Lixue0523/IT-library/wiki/%5Bcloud-devops%5Dpush-images-to-multiple-clouds)
 * [git usage](https://github.com/Lixue0523/IT-library/wiki/Git-usage)
+* [linux commands](https://github.com/Lixue0523/IT-library/wiki/%E3%80%90Linux%E3%80%91%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4)
